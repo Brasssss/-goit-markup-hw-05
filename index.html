@@ -21,14 +21,14 @@
     <link rel="stylesheet" href="./css/styles.css" />
   </head>
   <body class="body">
-    <!-- header -->
+    <!------------------- header ---------------------->
     <header class="header">
       <div class="container navigate place">
         <nav class="navigate">
           <a class="logo" lang="en" href="/"><span class="logo-part">Web</span>Studio</a>
           <ul class="nav-list">
             <li class="nav-list-item">
-              <a class="nav-link nav-link_active" href="./index.html">Студія</a>
+              <a class="nav-link nav-link-active" href="./index.html">Студія</a>
             </li>
             <li class="nav-list-item"><a class="nav-link" href="./portfolio.html">Портфоліо</a></li>
             <li class="nav-list-item"><a class="nav-link" href="./index.html">Контакти</a></li>
@@ -55,16 +55,16 @@
       </div>
     </header>
     <main>
-      <!-- Герой/Hero -->
+      <!---------- Герой/Hero ------------------------->
       <section class="hero">
         <div class="container">
           <div class="hero-inner">
             <h1 class="hero-title">Ефективні рішення для вашого бізнесу</h1>
-            <button class="hero-button" type="button">Замовити послугу</button>
+            <button class="hero-button" type="button" data-modal-open>Замовити послугу</button>
           </div>
         </div>
       </section>
-      <!-- Особливостi/features -->
+      <!-------------- Особливостi/features ------------>
       <div class="central-part">
         <section class="features">
           <div class="container">
@@ -117,7 +117,7 @@
             </ul>
           </div>
         </section>
-        <!--- Перелiк послуг/servises-->
+        <!------------- Чим ми займаємося/servises--------------->
         <section class="services">
           <div class="container">
             <h2 class="section-title">Чим ми займаємося</h2>
@@ -130,26 +130,33 @@
                     width="370"
                     height="294"
                   />
-
                   <div class="subscription-item"><h3>Десктопні&nbsp;додатки</h3></div>
                 </div>
               </li>
+
               <li class="services-list-item">
-                <img
-                  src="./images/box-2.jpg"
-                  alt="Розробка додаткiв на ноутбуцi"
-                  width="370"
-                  height="294"
-                />
+              <div class="subscription">
+                  <img
+                    src="./images/box-2.jpg"
+                    alt="Розробка додаткiв на ноутбуцi"
+                    width="370"
+                    height="294"
+                  />
+                  <div class="subscription-item"><h3>Мобільні&nbsp;додатки</h3></div>
+              </div>
               </li>
+
               <li class="services-list-item">
-                <img src="./images/box-3.jpg" alt="Планшет у долонях" width="370" height="294" />
+                <div class="subscription">
+                  <img src="./images/box-3.jpg" alt="Планшет у долонях" width="370" height="294" />
+                  <div class="subscription-item"><h3>Дизайнерські&nbsp;рішення</h3></div>
+                </div>
               </li>
             </ul>
           </div>
         </section>
       </div>
-      <!-- Команда розробникiв/team -->
+      <!------------- Команда розробникiв/team -------------->
       <section class="team">
         <div class="container">
           <h2 class="section-title">Наша команда</h2>
@@ -371,14 +378,16 @@
         </div>
       </section>
     </main>
-    <!-- Пiдвал/Footer -->
+    <!-------------- Пiдвал/Footer -------------------------->
     <footer class="footer">
       <div class="container flex">
         <div class="footter-first-part">
           <a class="footer-logo" lang="en" href="/"> <span class="logo-part">Web</span>Studio </a>
           <address class="adress-company">
             <ul>
-              <li class="footer-adress-item"><a class="address-link" href="">м. Київ, пр-т Лесі Українки, 26</a></li>
+              <li class="footer-adress-item">
+                <a class="address-link" href="">м. Київ, пр-т Лесі Українки, 26</a>
+              </li>
               <li class="footer-adress-item">
                 <a class="address-contact" href="mailto:info@devstudio.com">info@devstudio.com</a>
               </li>
@@ -421,7 +430,17 @@
         </div>
       </div>
     </footer>
+    <!----------------- modal-window ------------------->
 
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal-window">
+        <button type="button" class="modal-close" data-modal-close>
+          <svg class="social-icons" width="20" height="20">
+            <use href="./images/symbol-defs.svg#icon-close-black-X"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
 
     <script src="./js/modal.js"></script>
   </body>

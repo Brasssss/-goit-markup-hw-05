@@ -99,6 +99,48 @@ a{
     text-decoration: none;
 }
 
+
+
+/* @keyframes select-icon{
+}
+@keyframes select-icon-footer {
+
+}
+@keyframes select-button-hero {
+    0%{
+        color: var(--text-color-white);
+        background-color: var(--accent-color-blue);
+}
+    100%{
+        color: var(--text-color-black);
+        background-color: var(--background-color-white);
+    }
+
+}
+
+@keyframes select-button-portfolio {
+
+}
+
+@keyframes select-link {
+    0%{
+        color: var(--text-color-grey);
+    }
+    100%{
+        color: var(--accent-color-blue);
+    }
+}
+
+@keyframes select-nav-link{
+    0%{
+        color: var(--text-color-black);
+    }
+    100%{
+        color: var(--accent-color-blue);
+    }
+} */
+
+
 /* --------------------header -------------------*/
 
 .header{
@@ -154,6 +196,7 @@ a{
     margin-left: 93px;
 }
 .nav-link{
+    position: relative;
     display: block;
     padding-top: 32px;
     padding-bottom: 32px;
@@ -162,7 +205,11 @@ a{
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    
+
+    transition-property: color;
+    transition-duration: 250ms;
+    animation-timing-function:cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .nav-link:hover,
 .nav-link:focus{
@@ -170,8 +217,19 @@ a{
 }
 
 
-.nav-list .nav-link_active{
+.nav-link-active{
     color: var(--accent-color-blue);
+}
+.nav-link-active::after{
+    content: "";
+    position: absolute;
+    left:0;
+    bottom: -1px;
+    width: 100%;
+    height: 4px;
+    border-radius: 2px;
+
+    background: #2196F3;
 }
 
 
@@ -185,6 +243,10 @@ a{
     font-weight: 500;
     line-height: 1.14;
     letter-spacing: 0.02em;
+
+    transition-property: color;
+    transition-duration: 250ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-contacts-link:hover,
@@ -201,30 +263,13 @@ a{
 .header-icons{
     margin-right: 10px;
     fill: var(--text-color-grey);
+
+    transition-property: fill;
+    transition-duration: 250ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
-
-/* .mail-icon-header::before{
-    display: block;
-    content:"";
-    width: 16px;
-    height: 12px;
-    margin-right: 10px;
-    background-image: url(../images/mail-icon-header.png);
-    background-size: contain;
-
-} */
-
-/* .smartphone-icon-header::before {
-    content: "";
-    width: 10px;
-    height: 16px;
-    margin-right: 10px;
-    background-image: url(../images/smartphone-icon-header.png);
-    background-size: contain;
-
-} */
 
 .nav-contacts-item:not(:last-child){
     margin-right: 50px;
@@ -282,6 +327,11 @@ a{
     line-height: 1.88;
     letter-spacing: 0.06em;
     cursor: pointer;
+
+    transition-property: color;
+    transition-property: background-color;
+    transition-duration: 250ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 
    
@@ -351,7 +401,7 @@ a{
     color: var(--text-color-grey);
     line-height: 1.71;
 }
-/* --------------------------перелiк послуг/servises------------------- */
+/* -------Чим ми займаємося/servises------------------- */
 
 
 .section-title{
@@ -370,12 +420,7 @@ a{
 margin-right: 30px;
 }
 
-.service-item-subscription{
-}
 
-.item-subscription-title{
-
-}
 
 .subscription{
     position: relative;
@@ -452,6 +497,10 @@ margin-right: 30px;
     height: 44px;
     border-radius: 50%;
     margin-bottom: 30px;
+        
+    transition-property: background-color;
+    transition-duration: 250ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .social-item:not(:last-child){
     margin-right: 10px;
@@ -459,6 +508,9 @@ margin-right: 30px;
 .social-link{
 
     fill: var(--cliets-logo);
+    transition-property: fill ;
+    transition-duration: 250ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
@@ -496,11 +548,19 @@ margin-right: 30px;
     height: 92px;
     border: 1px solid var(--cliets-logo);
     border-radius: 4px;
+
+    transition-property: border-color ;
+    transition-duration: 250ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 
 .clients-icons{
     fill: var(--cliets-logo);
+    transition-property: fill;
+    transition-duration: 250ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 .clients-link:hover,
 .clients-link:hover .clients-icons{
@@ -548,6 +608,9 @@ margin-right: 30px;
     color: var(--address-links-color-grey);
     line-height: 1.71;
     font-style: normal;
+    transition-property: color;
+    transition-duration: 250ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-contact:hover,
 .address-contact:focus{
@@ -598,6 +661,9 @@ margin-right: 30px;
 }
 .footer-social-item:hover{
     background-color: var(--accent-color-blue);
+    transition-property: background-color;
+    transition-duration: 250ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-social-link{
@@ -643,6 +709,7 @@ margin-right: 30px;
     background-color: var(--background-color-dark-white);
 }
 
+
 .project-list-item-button{
     padding: 6px 22px;
 
@@ -651,12 +718,20 @@ margin-right: 30px;
     font-size: 16px;
     line-height: 1.63;
     background-color: var(-background-color-dark-white);
+
+    transition-property: color;
+    transition-property: background-color;
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .project-list-item-button:hover,
 .project-list-item-button:focus {
     color: var(--background-color-full-white);
     background-color: var(--accent-color-blue);
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+
     
 }
 
@@ -673,11 +748,44 @@ margin-right: 30px;
 }
 .portfolio-project-link{
     display: block;
+
+    transition-property: box-shadow;
+    transition-duration: 250ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .portfolio-project-link:hover,
 .portfolio-project-link:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
+    
 }
+.relative-div{
+    position: relative;
+    overflow: hidden;
+}
+
+.portfolio-switch-text{
+    position: absolute;
+    top: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 63px 24px;
+    
+    font-size: 18px;
+    line-height:calc(28/18);
+    color: var(--text-color-white);
+    background: rgba(33, 150, 243, 0.9);
+
+    transform: translateY(100%);
+    transition-property: transform;
+    transition-duration: 250ms;
+    animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    overflow: auto;
+}
+.portfolio-project-link:hover .portfolio-switch-text{
+    transform: translateY(0);
+}
+
 
 .border-div{
     border-left: 1px solid #ECECEC;
@@ -703,4 +811,45 @@ margin-right: 30px;
 .portfolio-project-list-text{
     padding-left: 24px;
     
+}
+
+/* -----------------backdrop------------------------- */
+.backdrop{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    transition: opacity 200ms linear, visibility 200ms linear;
+}
+.modal-window{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 528px;
+    min-height: 581px;
+    background: #FFFFFF;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+
+}
+.modal-close{
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.is-hidden{
+    visibility: hidden;
+    opacity: 0;
+    pointer-events: none;
 }
